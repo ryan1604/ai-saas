@@ -9,6 +9,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { ChatCompletionMessageParam } from "openai/resources/index.mjs";
 import toast from "react-hot-toast";
+import ReactMarkdown from "react-markdown";
 
 import Heading from "@/components/Heading";
 import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
@@ -124,7 +125,9 @@ const ConversationPage = () => {
                 )}
               >
                 {message.role === "user" ? <UserAvatar /> : <BotAvatar />}
-                <p className={cn("text-sm")}>{message.content as string}</p>
+                <p className="text-sm">
+                  <ReactMarkdown>{message.content as string}</ReactMarkdown>
+                </p>
               </div>
             ))}
           </div>
