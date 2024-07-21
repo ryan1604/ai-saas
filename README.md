@@ -20,4 +20,34 @@ Welcome to my AI SaaS Platform! This project is a web application designed to of
 - **AI Models**: Utilised OpenAI for chat, code, and image generation, and Replicate for music and video generation.
 - **Customer Support**: Implemented `Crisp` for responsive customer support and engagement.
 
+## Install
+
+- Fork the repo
+- Clone it to your desktop
+- run `npm install` in the root dir of the project
+- setup .env file:
+  ```
+  NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=YOUR_CLERK_PUBLISHABLE_KEY
+  CLERK_SECRET_KEY=YOUR_CLERK_SECRET
+
+  NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+  NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+  NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/dashboard
+  NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/dashboard
+
+  OPENAI_API_KEY=YOUR_OPENAI_KEY
+
+  REPLICATE_API_TOKEN=YOUR_REPLICATE_KEY
+
+  DATABASE_URL=YOUR_DATABASE_URL
+
+  STRIPE_API_KEY=YOUR_STRIPE_KEY
+
+  NEXT_PUBLIC_APP_URL=http://localhost:3000
+
+  STRIPE_WEBHOOK_SECRET=YOUR_STRIPE_WEBHOOK
+  ```
+- run `npm run dev`
+- try it out at `localhost:3000`
+
 ### Try it [here](https://ai-saas-iota-eight.vercel.app/)
